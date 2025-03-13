@@ -1,0 +1,12 @@
+12:50:05:386 [main] INFO  testCases.AcccountRegisterTest - validating confirm message
+12:50:05:395 [main] INFO  testCases.AcccountRegisterTest - ***** Finished AcccountRegisterTest *****
+12:53:49:038 [main] INFO  testCases.AcccountRegisterTest - ***** Starting AcccountRegisterTest *****
+12:53:49:048 [main] TRACE testCases.AcccountRegisterTest - Trace
+12:53:49:392 [main] INFO  testCases.AcccountRegisterTest - Clicked on Account link
+12:53:49:808 [main] INFO  testCases.AcccountRegisterTest - Clicked on Register link
+12:53:49:826 [main] INFO  testCases.AcccountRegisterTest - Providing customer details
+12:53:50:539 [main] DEBUG testCases.AcccountRegisterTest - Debug Logs...
+12:53:50:979 [main] INFO  testCases.AcccountRegisterTest - validating confirm message
+12:53:50:979 [main] INFO  testCases.AcccountRegisterTest - ***** Finished AcccountRegisterTest *****
+12:54:59:026 [main] INFO  testCases.AcccountRegisterTest - ***** Starting AcccountRegisterTest *****
+12:54:59:033 [main] TRACE testCases.AcccountRegisterTest - Trace

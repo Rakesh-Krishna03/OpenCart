@@ -1,0 +1,7 @@
+testBase\BaseTestClass.class
+testCases\AcccountRegisterTest.class
+testCases\OpenCartDataDrivenTest.class
+testCases\LoginTest.class
+utilities\DataProviders.class
+utilities\ExtentReportUtility.class
+utilities\ExcelUtility.class
