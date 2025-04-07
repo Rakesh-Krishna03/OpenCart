@@ -1,43 +1,30 @@
 package javaPrograms;
 
-import java.io.File;
-import java.io.IOException;
-import java.time.Duration;
-
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.io.FileHandler;
+import java.util.HashMap;
+import java.util.Map;
 
 public class PracticeProgram {
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
+		
+		String str = "Rakesh Kumar";
+		
+		// Convert string to lowercase and remove spaces if needed
+        str = str.toLowerCase().replaceAll("\\s+", "");
 
-		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        // Create a HashMap to store character counts
+        Map<Character, Integer> charCountMap = new HashMap<>();
 
-		driver.get("https://wallpaperscraft.com/");
+        // Count each character's occurrences
+        for (char c : str.toCharArray()) {
+            charCountMap.put(c, charCountMap.getOrDefault(c, 0) + 1);
+        }
 
-		TakesScreenshot ts = (TakesScreenshot) driver;
-		File src = ts.getScreenshotAs(OutputType.FILE);
-		File dest = new File("./bugShots/page.png");
-
-		FileUtils.copyFile(src, dest);
-
-		driver.findElement(By.xpath("//input[@name='query']")).sendKeys("Success", Keys.ENTER);
-		WebElement element = driver.findElement(By.xpath(
-				"//img[@src='https://images.wallpaperscraft.com/image/single/quote_success_failure_153171_300x168.jpg']"));
-
-		File srcElement = element.getScreenshotAs(OutputType.FILE);
-		File destElement = new File("./bugShots/element.png");
-
-		FileHandler.copy(srcElement, destElement);
-
-		driver.quit();
+        // Print duplicate characters and their count
+        System.out.println("Duplicate characters and their occurrences:");
+        for (Map.Entry<Character, Integer> entry : charCountMap.entrySet()) {
+            if (entry.getValue() > 1) {
+                System.out.println("'" + entry.getKey() + "' : " + entry.getValue());
+            }
+        }
 	}
 }
